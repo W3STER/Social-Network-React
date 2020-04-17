@@ -1,0 +1,14 @@
+.header-app{
+    padding: 15px 0;
+    background-color: #7156FB;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo.link{
+    color: #fff;
+    font-weight: bold;
+}

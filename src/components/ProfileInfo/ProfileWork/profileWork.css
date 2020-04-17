@@ -1,0 +1,24 @@
+.section-wrapper{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 24px 16px;
+    margin-bottom: 24px;
+}
+
+.description-wrapper{
+    display: flex;
+}
+
+.caption.description{
+    width: 15%;
+}
+
+.company-name.caption{
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.user-position.caption{
+    color: #333;
+}
+

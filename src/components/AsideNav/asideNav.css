@@ -1,0 +1,58 @@
+.aside-nav{
+    width: 20%;
+    padding: 30px 0;
+}
+
+._wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.nav-link_box{
+    margin-bottom: 16px;
+}
+
+.nav-link{
+    color: #333;
+    padding-left: 40px;
+    position: relative;
+}
+
+.nav-link::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/icons/profile-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 4px;
+    /* background-color: rgba(113, 86, 251, .1);  */
+    border-radius: 4px;
+    left: 0;
+    top: -20%;
+}
+
+.nav-link._friends::before{
+    background-image: url(../../assets/icons/friends-icon.svg);
+}
+
+.nav-link._news::before{
+    background-image: url(../../assets/icons/news-icon.svg);
+}
+
+.nav-link._media::before{
+    background-image: url(../../assets/icons/media-icons.svg);
+}
+
+.nav-link._edit::before{
+    background-image: url(../../assets/icons/settings-icon.svg);
+}
+
+.nav-link._favorites::before{
+    background-image: url(../../assets/icons/favorites-icon.svg);
+}
+

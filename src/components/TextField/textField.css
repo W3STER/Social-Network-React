@@ -1,0 +1,13 @@
+.post-field{
+    padding: 0 0 16px 0;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 16px;
+}
+
+.edit-field{
+    margin-bottom: 12px;
+}
+
+.input-label{
+    font-size: 14px;
+}

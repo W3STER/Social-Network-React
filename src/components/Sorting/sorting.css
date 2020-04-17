@@ -1,0 +1,8 @@
+.sorting-wrapper{
+    display: flex;
+    padding: 20px 0;
+}
+
+.sorting-caption{
+    margin-right: 10px;
+}

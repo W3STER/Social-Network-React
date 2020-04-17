@@ -1,0 +1,52 @@
+.info-wrapper{
+    display: flex;
+    padding: 30px 30px;
+    border-radius: 8px;
+    background-color: #7156FB;
+    margin-bottom: 30px;
+}
+
+.avatar-box{
+    width: 150px;
+    height: 150px;
+    background-color: #F3FBFF;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar-photo{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profile-info{
+    padding: 0 30px;
+}
+
+.profile-name,
+.profile-status,
+.profile-city{
+    color: #fff
+}
+
+.profile-status{
+    margin-bottom: 24px;
+}
+
+.profile-city{
+    position: relative;
+    padding-left: 25px;
+}
+
+.profile-city::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-image: url(../../../assets/icons/pin-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+}

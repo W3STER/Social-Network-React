@@ -1,0 +1,67 @@
+.player-wrapper{
+    display: flex;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.player-description{
+    position: relative;
+    font-weight: 600;
+    padding:  0 0 0 40px;
+}
+
+.player-description::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../assets/icons/player-note-icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 10%;
+}
+
+.player-panel{
+    display: flex;
+    margin-left: 24px;
+}
+
+.play-btn{
+    display: block;
+    background-image: url(../../assets/icons/play-btn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    outline: none;
+    cursor: pointer;
+}
+
+.play-btn:hover{
+    background-image: url(../../assets/icons/play-btn-hover.svg);
+    transition: all .4s;
+}
+
+.pause-btn{
+    display: block;
+    background-image: url(../../assets/icons/pause-btn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 16px;
+}
+
+.pause-btn:hover{
+    background-image: url(../../assets/icons/pause-btn-orange.svg);
+    transition: all .4s;
+}

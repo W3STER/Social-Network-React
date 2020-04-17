@@ -1,0 +1,48 @@
+.user-item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.user-avatar{
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.user-info{
+    margin-left: 20px;
+}
+
+.user-name{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.user-company{
+    margin-bottom: 5px;
+}
+
+.user-city{
+    position: relative;
+    padding-left: 18px;
+}
+
+.user-city::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 11px;
+    height: 14px;
+    background-image: url(../../../assets/icons/pin-icon-user-item.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 15%;
+}
