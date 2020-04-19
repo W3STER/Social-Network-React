@@ -11,7 +11,6 @@ export const newsReducer = (state = initialState, action) => {
                 favorites: [...state.favorites, action.payload]
             }
         case DELETE_FAVORITES:
-            console.log(action.payload)
             return {
                 ...state,
                 favorites: state.favorites.filter(item => item.publishedAt !== action.payload)

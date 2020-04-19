@@ -45,6 +45,6 @@
     transition: all .3s;
 }
 
-.share-btn._added{
+._added{
     opacity: 1;
 }

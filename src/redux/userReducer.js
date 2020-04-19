@@ -12,7 +12,6 @@ const initialState = {
         position: 'Frontend developer / ReactJS',
         company: 'Facebook',
         password: 'qwerty',
-        confirmPassword: '',
         // avatar: 'https://sun9-65.userapi.com/c841436/v841436928/457e7/DBHuxyFwzvU.jpg'
     }
 }

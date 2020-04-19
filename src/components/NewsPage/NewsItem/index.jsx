@@ -3,16 +3,20 @@ import './newsItem.css'
 import { connect } from 'react-redux'
 import { shareNews, deleteFavorites } from '../../../redux/actions'
 import { DeleteButton } from '../../DeleteButton'
+import { withHandleAdded } from './withHandleAdded'
 
 export const NewsItemView = props => {
+    const newsPost = props.news
     const addFavorites = () => {
-        const newsPost = props.news
         props.shareNews(newsPost)
+        props.handleAdd()
     }
     const deleteFavoritesItem = () => {
         const id = props.news.publishedAt
         props.deleteFavorites(id)
     }
+
+    const added = props.added ? "_added" : ""
 
     return (
         <div className="news-item-wrapper">
@@ -29,7 +33,7 @@ export const NewsItemView = props => {
                 {props.shareNews &&
                     <div className="btn-box">
                         <button
-                            className="share-btn"
+                            className={`share-btn ${added}`}
                             onClick={addFavorites}
                         />
                     </div>
@@ -51,5 +55,6 @@ const favoriteDispatchToProps = {
     deleteFavorites
 }
 
-export const NewsItem = connect(null, mapDispatchToProps)(NewsItemView)
+const NewsItemWithHandleAdded = withHandleAdded(NewsItemView)
+export const NewsItem = connect(null, mapDispatchToProps)(NewsItemWithHandleAdded)
 export const NewsItemFavorites = connect(null, favoriteDispatchToProps)(NewsItemView)

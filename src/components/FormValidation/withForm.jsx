@@ -94,26 +94,10 @@ export const withForm = config => Basecomponent => {
             })
         }
 
-        formValidation = () => {
-            console.log(this.state.formError)
-            let formError = Object.values(this.props.user)
-            this.setState(prevState => {
-                return {
-                    ...prevState,
-                    formError: formError.forEach(item => {
-                        if(item == ''){
-                            return 'true'
-                        }
-                    })
-                }
-            })
-        }
-
         render() {
             return (
                 <Basecomponent
                     {...this.props}
-                    formError={this.state.formError}
                     formValidation={this.formValidation}
                     values={this.state.values}
                     disabled={this.state.disabled}

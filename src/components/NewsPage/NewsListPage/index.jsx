@@ -5,6 +5,7 @@ import { Loading } from '../../Loading';
 export const NewsListPage = props => {
     const [news, setNews] = useState([])
     const [loading, setLoading] = useState(true)
+    const [errMessage, setErrMessage] = useState()
     useEffect(() => {
         let url = 'http://newsapi.org/v2/top-headlines?' +
             'country=us&' +
@@ -12,20 +13,26 @@ export const NewsListPage = props => {
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                setNews(data.articles)
-                setLoading(false)
+                if(data.status === 'error'){
+                    setErrMessage(data.message)
+                    setLoading(false)
+                }else{
+                    setNews(data.articles)
+                    setLoading(false)
+                }
+                
             })
     }, [])
-    console.log(news)
     return (
         <div>
             <h2 className="title-page">News</h2>
+            <p>{errMessage}</p>
             {loading ?
                 <Loading />
                 :
                 news.map(item => (
                     <NewsItem news={item} />
-                ))
+                )) 
             }
         </div>
     )

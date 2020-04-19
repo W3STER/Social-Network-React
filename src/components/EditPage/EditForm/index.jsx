@@ -21,7 +21,6 @@ const EditFormView = props => {
             props.saveEdit(user)
             props.setFieldDirty('')
         }
-        props.formValidation()
     }
 
     return (
@@ -71,7 +70,7 @@ const EditFormView = props => {
                 name="password"
                 type="password"
             />
-            <EditTextField
+            {/* <EditTextField
                 {...props}
                 value={props.userValues.confirmPassword}
                 error={props.errors.confirmPassword}
@@ -79,7 +78,7 @@ const EditFormView = props => {
                 label="Confirm password" 
                 name="confirmPassword"
                 type="password"
-            />
+            /> */}
             <Button
                 disabled={props.disabled}
                 style="primary"
